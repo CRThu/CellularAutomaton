@@ -1,20 +1,27 @@
 ﻿#include "stdafx.h"
 #include "CAcalc.h"
-//// TODOlist
-//#define DEBUG_CALC 0
-//
-//#define _OUTPUT_TRUE_   "#"
-//#define _OUTPUT_FALSE_  " "
-//
-//// SetData*
-//void CA1d::SetData(int *__Data, int Length)
-//{
-//    for (int i = 0; i < Length; i++)
-//        Data.push_back(__Data[i]);
-//}
+
+#define DEBUG_CALC 0
+
+#define _OUTPUT_TRUE_   "#"
+#define _OUTPUT_FALSE_  " "
+
+// SetData*
+void CA2d::SetData(int *__Data, int row,int column)
+{
+    std::list<int> SetDataTemp;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < column; j++)
+        {
+            SetDataTemp.push_back(__Data[i*row + j]);
+        }
+        Data.push_back(SetDataTemp);
+        SetDataTemp.clear();
+    }
+}
 //void CA1d::SetDataZero(int Size)
 //{
-//	ZeroLocation = 0;
 //	Data.assign(Size,0);
 //}
 //void CA1d::SetDataRand(int Size)
