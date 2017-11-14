@@ -12,7 +12,8 @@ int main()
     CA2d CA;
 //    CA.SetRule(110);    // rule : 110
 //    CA.PrintRule();
-//
+
+    /*
     int Data[36] = { 0,1,0,1,1,1,
                               1,0,0,1,1,0,
                               0,0,0,1,1,1,
@@ -22,7 +23,9 @@ int main()
 
     CA.SetData(Data, 6, 6);
 
-    //CA.SetDataRand(64); // length : 64
+    CA.SetDataZero(6,6); // length : 6*6
+    */
+    CA.SetDataRand(6, 6); // length : 6*6
 //    CA.PrintData();
 //    //std::cout<<"Data Size : "<<CA.GetDataSize();
 //    for (int i = 0; i < 63; i++)

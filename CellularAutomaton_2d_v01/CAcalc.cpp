@@ -20,17 +20,23 @@ void CA2d::SetData(int *__Data, int row,int column)
         SetDataTemp.clear();
     }
 }
-//void CA1d::SetDataZero(int Size)
-//{
-//	Data.assign(Size,0);
-//}
-//void CA1d::SetDataRand(int Size)
-//{
-//	srand((unsigned)time(NULL)); //初始化随机数种子
-//	ZeroLocation = 0;
-//	for (int i = 0; i < Size; i++)
-//        Data.push_back(GetRand(0, 1));
-//}
+void CA2d::SetDataZero(int row, int column)
+{
+    int* a = new int[row*column];
+    for (int i = 0; i < row*column; i++)
+        a[i] = 0;
+    SetData(a, row, column);
+    delete[] a;
+}
+void CA2d::SetDataRand(int row, int column)
+{
+    srand((unsigned)time(NULL)); //初始化随机数种子
+    int* a = new int[row*column];
+    for (int i = 0; i < row*column; i++)
+        a[i] = GetRand(0, 1);
+    SetData(a, row, column);
+    delete[] a;
+}
 //// SetRule*
 //void CA1d::SetRule(byte __RuleName)
 //{
@@ -83,11 +89,12 @@ void CA2d::SetData(int *__Data, int row,int column)
 //    Data = Temp;
 //    Temp.clear();
 //}
-//// GetRand
-//int CA1d::GetRand(int a, int b)
-//{
-//    return (rand() % (b - a + 1)) + a;
-//}
+
+// GetRand
+int CA2d::GetRand(int a, int b)
+{
+    return (rand() % (b - a + 1)) + a;
+}
 //// GetData*
 //int CA1d::GetDataSize()
 //{

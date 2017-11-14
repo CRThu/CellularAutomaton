@@ -9,8 +9,8 @@ public:
      //Set*
     // SetData*
     void SetData(int *__Data, int row, int column);  // 输入自定义 Data
-	//void SetDataZero(int Size);     // 初始化 Data 为 0
-	//void SetDataRand(int Size);     // 初始化 Data 为 Rand
+	void SetDataZero(int row, int column);     // 初始化 Data 为 0
+	void SetDataRand(int row, int column);     // 初始化 Data 为 Rand
  //   // SetRule*
 	//void SetRule(byte __RuleName);      // 写入 Rule
 
@@ -18,9 +18,9 @@ public:
  //   // RunNext*
  //   void RunNextStep();     // 计算下一步
 
- //   // Get*
- //   // GetRand
- //   int GetRand(int a, int b);      // 获取随机数
+    // Get*
+    // GetRand
+    int GetRand(int a, int b);      // 获取随机数
  //   // GetData*
 	//int GetDataSize();      // 获取 Data 大小
  //   // GetTemp*
