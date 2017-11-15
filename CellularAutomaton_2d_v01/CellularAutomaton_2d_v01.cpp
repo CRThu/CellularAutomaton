@@ -34,5 +34,6 @@ int main()
 //        CA.PrintData();
 //    }
 //    getchar();
+    CA.PrintData();
     return 0;
 }

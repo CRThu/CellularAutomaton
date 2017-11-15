@@ -4,7 +4,7 @@
 #define DEBUG_CALC 0
 
 #define _OUTPUT_TRUE_   "#"
-#define _OUTPUT_FALSE_  " "
+#define _OUTPUT_FALSE_  "."
 
 // SetData*
 void CA2d::SetData(int *__Data, int row,int column)
@@ -105,20 +105,22 @@ int CA2d::GetRand(int a, int b)
 //{
 //    return Temp.size();
 //}
-//// Print*
-//void CA1d::PrintData()
-//{
-//#if DEBUG_CALC == 1
-//	std::cout << "data : " << std::endl;
-//#endif
-//    for (int i = 0; i < (-ZeroLocation); i++)
-//        std::cout << " ";
-//	// C++11
-//    for (auto iter : Data)
-//        // std::cout << iter;
-//        std::cout << ((iter == 1) ? _OUTPUT_TRUE_ : _OUTPUT_FALSE_);
-//	std::cout << std::endl;
-//}
+// Print*
+void CA2d::PrintData()
+{
+#if DEBUG_CALC == 1
+    std::cout << "data : " << std::endl;
+#endif
+    // C++11
+    for (auto IterRow : Data)
+    {
+        for (auto iter : IterRow)
+            // std::cout << iter;
+            std::cout << ((iter == 1) ? _OUTPUT_TRUE_ : _OUTPUT_FALSE_);
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+}
 //void CA1d::PrintRule()
 //{
 //	std::cout << "Rule " << int(RuleName) << " : " << std::endl;

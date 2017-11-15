@@ -26,8 +26,8 @@ public:
  //   // GetTemp*
  //   int GetTempSize();      // 获取 Temp 大小
 
- //   // Print*
-	//void PrintData();       // 打印 Data
+    // Print*
+	void PrintData();       // 打印 Data
 	//void PrintRule();       // 打印 Rule
 
 private:
